@@ -1,0 +1,5 @@
+<!-- custom_drawable_left.xml -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Adjust the padding top to move the drawable upward -->
+    <item android:drawable="@drawable/tabler_pencil" android:top="-3dp" android:left="0dp" android:right="3dp" android:bottom="0dp"/>
+</layer-list>

@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="25dp"
+            android:fontFamily="@font/poppinsbold"
+            android:textSize="28sp"
+            android:text="We described it for you!"
+            >
+        </TextView>
+
+        <TextView
+            android:id="@+id/headingdescription"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="20dp"
+            android:layout_below="@+id/heading"
+            android:fontFamily="@font/poppinsmedium"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:text="You can edit, add, and remove the description for more accurate describing."
+            >
+        </TextView>
+
+        <!--CHIPS-->
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipType1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/headingdescription"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/descriptionbg"
+            android:paddingTop="20dp"
+            android:paddingBottom="30dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:clipToPadding="false"
+            >
+            <TextView
+                android:id="@+id/category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/headingdescription"
+                android:fontFamily="@font/poppinsmedium"
+                android:text="Category:">
+            </TextView>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+
+                style="@style/customdd"
+                android:hint="select"
+                android:clipToPadding="false">
+
+                <AutoCompleteTextView
+                    android:id="@+id/categoryDropdown"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="8dp"
+                    android:inputType="none" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+           <com.google.android.material.chip.ChipGroup
+               android:id="@+id/chipType"
+               android:clipToPadding="false"
+               android:paddingBottom="7dp"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content">
+
+               <TextView
+                   android:id="@+id/type"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_below="@id/category"
+                   android:fontFamily="@font/poppinsmedium"
+                   android:text="Type:">
+               </TextView>
+
+               <androidx.appcompat.widget.AppCompatButton
+                   android:id="@+id/addTypeButton"
+                   android:text="@string/placeholder"
+                   android:textColor="@android:color/transparent"
+                   android:layout_width="34dp"
+                   android:layout_height="40dp"
+                   android:background="@drawable/plus1" />
+
+           </com.google.android.material.chip.ChipGroup>
+
+        </com.google.android.material.chip.ChipGroup>
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipColor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/chipType1"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/descriptionbg"
+            android:paddingTop="20dp"
+            android:paddingBottom="30dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:clipToPadding="false">
+
+            <TextView
+                android:id="@+id/color"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/headingdescription"
+                android:layout_marginTop="25dp"
+                android:fontFamily="@font/poppinsmedium"
+                android:text="Color:">
+
+            </TextView>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/addColorButton"
+                android:text="@string/placeholder"
+                android:textColor="@android:color/transparent"
+                android:layout_width="34dp"
+                android:layout_height="40dp"
+                android:background="@drawable/plus1" />
+
+        </com.google.android.material.chip.ChipGroup>
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipModelBrandSize"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/chipColor"
+            android:background="@drawable/descriptionbg"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="30dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:clipToPadding="false">
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chipModel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="7dp"
+                android:clipToPadding="false">
+                <TextView
+                    android:id="@+id/model"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/headingdescription"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="Model:">
+
+                </TextView>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/addModelButton"
+                    android:text="@string/placeholder"
+                    android:textColor="@android:color/transparent"
+                    android:layout_width="34dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/plus1" />
+
+            </com.google.android.material.chip.ChipGroup>
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chipBrand"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="7dp"
+                android:clipToPadding="false">
+
+                <TextView
+                    android:id="@+id/brand"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/addModelButton"
+                    android:paddingTop="10dp"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="Brand:">
+                </TextView>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/addBrandButton"
+                    android:text="@string/placeholder"
+                    android:textColor="@android:color/transparent"
+                    android:layout_width="34dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/plus1" />
+            </com.google.android.material.chip.ChipGroup>
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chipSize"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="7dp"
+                android:clipToPadding="false">
+
+                <TextView
+                    android:id="@+id/size"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/addModelButton"
+                    android:paddingTop="10dp"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="Size:">
+                </TextView>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/addSizeButton"
+                    android:text="@string/placeholder"
+                    android:textColor="@android:color/transparent"
+                    android:layout_width="34dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/plus1" />
+            </com.google.android.material.chip.ChipGroup>
+        </com.google.android.material.chip.ChipGroup>
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/textuf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/chipModelBrandSize"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/descriptionbg"
+            android:paddingTop="20dp"
+            android:paddingBottom="30dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:clipToPadding="false">
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chipText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:paddingBottom="7dp">
+
+                <TextView
+                    android:id="@+id/text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/headingdescription"
+                    android:paddingTop="7dp"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="Text:">
+
+                </TextView>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/addTextButton"
+                    android:text="@string/placeholder"
+                    android:textColor="@android:color/transparent"
+                    android:layout_width="34dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/plus1" />
+
+
+            </com.google.android.material.chip.ChipGroup>
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chipUF"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:paddingBottom="7dp">
+
+                <TextView
+                    android:id="@+id/uf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/headingdescription"
+                    android:paddingTop="10dp"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="Unique Feature:">
+
+                </TextView>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/addUFButton"
+                    android:text="@string/placeholder"
+                    android:textColor="@android:color/transparent"
+                    android:layout_width="34dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/plus1" />
+
+
+            </com.google.android.material.chip.ChipGroup>
+
+        </com.google.android.material.chip.ChipGroup>
+
+        <TextView
+            android:id="@+id/heading2"
+            android:layout_below="@id/textuf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="25dp"
+            android:fontFamily="@font/poppinsbold"
+            android:textSize="20sp"
+            android:text="Let's add some more information.">
+
+        </TextView>
+        <TextView
+            android:id="@+id/headingdescription2"
+            android:layout_below="@id/heading2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginBottom="21dp"
+            android:fontFamily="@font/poppinsmedium"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:text="This will help us find your missing item accurately.">
+        </TextView>
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/headingdescription2"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/locationbg"
+            android:paddingTop="20dp"
+            android:paddingBottom="50dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:clipToPadding="false">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Visited Locations"
+                android:fontFamily="@font/poppinsmedium"
+                android:textStyle="bold"
+                android:textSize="20sp" />
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chipLocation"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        style="@style/customdd"
+                        android:hint="select"
+                        android:clipToPadding="false">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/locationDropdown"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="none" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/locationButton"
+                        android:text="@string/placeholder"
+                        android:textColor="@android:color/transparent"
+                        android:layout_width="34dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/plus1" />
+                </LinearLayout>
+            </com.google.android.material.chip.ChipGroup>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Time Object Found"
+                android:fontFamily="@font/poppinsmedium"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:paddingTop="10dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <EditText
+                    android:id="@+id/editTextDate"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
+                    android:background="@drawable/date_time"
+
+                    android:ems="10"
+                    android:hint="Date"
+                    android:layout_marginEnd="5dp"
+                    android:inputType="date" />
+
+                <EditText
+                    android:id="@+id/editTextTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
+                    android:background="@drawable/date_time"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="Time"
+                    android:inputType="time" />
+
+            </LinearLayout>
+
+        </com.google.android.material.chip.ChipGroup>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/location"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="121dp"
+            android:layout_marginBottom="50dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="120dp"
+            android:background="@color/yellow"
+            android:fontFamily="@font/poppinsbold"
+            android:textColor="@color/blue"
+            android:text="Submit">
+
+        </androidx.appcompat.widget.AppCompatButton>
+    </RelativeLayout>
+
+</ScrollView>

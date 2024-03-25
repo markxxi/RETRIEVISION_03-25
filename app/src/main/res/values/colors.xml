@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="blackLoginBG">#202420</color>
+    <color name="inputTextBG">#2c2c2c</color>
+    <color name="yellow">#FBBC09</color>
+    <color name="blue">#143C6F</color>
+    <color name="fadedblue">#DBDBDB</color>
+
+    <color name="darkgray">#1E1E1E</color>
+</resources>
